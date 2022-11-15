@@ -1,22 +1,22 @@
-<?php 
+<?php
 session_start();
 
 include 'db/connection.php';
 
 
-if (!isset($_SESSION['username'] )) {
+if (!isset($_SESSION['username'])) {
 
-	header('location:../signup_page.php');
+    header('location:../signup_page.php');
 }
 
 
 
-		$retrieve="SELECT * FROM users";
-		$query= $conn->query($retrieve);
-		// $query->execute();
-		$feching=$query->fetchAll(PDO::FETCH_OBJ);
+$retrieve = "SELECT * FROM users";
+$query = $conn->query($retrieve);
+// $query->execute();
+$feching = $query->fetchAll(PDO::FETCH_OBJ);
 
-     ?>
+?>
 
 
 <!DOCTYPE html>
@@ -69,68 +69,68 @@ if (!isset($_SESSION['username'] )) {
 
 
         <!-- Sidebar Start -->
-        <div class="sidebar pe-4 pb-3 " >
-        <nav class="navbar bg-light navbar-light">
+        <div class="sidebar pe-4 pb-3 ">
+            <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary">Exodus</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="../img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="../../images/exodusprofile.jpg" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                <h6 class="mb-0"><?php echo $_SESSION['username'] ;?></h6>
-                <span>Admin</span>
-                     </div>
+                        <h6 class="mb-0"><?php echo $_SESSION['username']; ?></h6>
+                        <span>Admin</span>
+                    </div>
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="../index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2 text-primary"></i>Dashboard</a>
-                    
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-calendar me-2 text-primary"></i>Destination</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="destination/destination.php" class="dropdown-item active"><i class="fa fa-plus-circle me-2 text-primary"></i>Add Destination</a>
                             <a href="destList.php" class="dropdown-item "><i class="fa fa-file me-2 text-primary"></i>destination List</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user-circle me-2 text-primary"></i>Users</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
-                            <a href="../adduser/adduser.php" class="nav-item nav-link"><i class="fa fa-plus-circle me-2 text-primary"></i> Add Users</a>
-                            <a href="../adduser/listuser.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>UserList</a>
-                            
+                            <a href="#" class="nav-item nav-link"><i class="fa fa-plus-circle me-2 text-primary"></i> Add Users</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>UserList</a>
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-image me-2 text-primary"></i>Gallery</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
-                            <a href="../gallery/insertGallery.php" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add Gallery</a>
-                            <a href="../gallery/listOfGallery.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Gallery list</a>
-                            
+                            <a href="#" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add Gallery</a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Gallery list</a>
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-laptop me-2 text-primary"></i>Hotel</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
-                            <a href="../news/postNews.php" class="dropdown-item "><i class="fa fa-plus-circle me-2 text-primary"></i>Add Hotel </a>
-                            <a href="../news/postlist.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Hotel list</a>
-                            
+                            <a href="#" class="dropdown-item "><i class="fa fa-plus-circle me-2 text-primary"></i>Add Hotel </a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Hotel list</a>
+
                         </div>
-                    </div> 
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-laptop me-2 text-primary"></i>View booking</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="Booked/BookedDestination.php" class="dropdown-item "><i class="fa fa-plus-circle me-2 text-primary"></i>Tour Booked </a>
-                            <a href="../news/postlist.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Hotel Booked</a>
-                            
+                            <a href="#" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Hotel Booked</a>
+
                         </div>
                     </div>
-                    
+
                 </div>
             </nav>
-            </div>
+        </div>
         <!-- Sidebar End -->
 
 
@@ -148,18 +148,18 @@ if (!isset($_SESSION['username'] )) {
                     <input class="form-control border-0 text-danger" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    
-                   
+
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION['username'] ;?></span>
+                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION['username']; ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
                             <a href="login/signout.php" class="dropdown-item">Log Out</a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -168,12 +168,12 @@ if (!isset($_SESSION['username'] )) {
 
 
             <!-- Sale & Revenue Start -->
-           
+
             <!-- Sale & Revenue End -->
 
 
             <!-- Sales Chart Start -->
-            
+
 
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
@@ -186,10 +186,10 @@ if (!isset($_SESSION['username'] )) {
                                 $query = $connect->query("SELECT * FROM destination");
 
 
-                                
-                            ?>
-                                <h4 class="mb-0 text-primary"><?= $query->num_rows;?></h4>
-                               
+
+                                ?>
+                                <h4 class="mb-0 text-primary"><?= $query->num_rows; ?></h4>
+
                             </div>
                         </div>
                     </div>
@@ -201,9 +201,9 @@ if (!isset($_SESSION['username'] )) {
                                 <?php
                                 $query = $connect->query("SELECT * FROM hotels");
 
-                            ?>
-                               <h4 class="mb-0 text-primary"><?= $query->num_rows;?></h4>
-                              
+                                ?>
+                                <h4 class="mb-0 text-primary"><?= $query->num_rows; ?></h4>
+
                             </div>
                         </div>
                     </div>
@@ -215,9 +215,9 @@ if (!isset($_SESSION['username'] )) {
                                 <?php
                                 $query = $connect->query("SELECT * FROM booking");
 
-                            ?>
-                                <h4 class="mb-0 text-primary"><?= $query->num_rows;?></h4>
-                                
+                                ?>
+                                <h4 class="mb-0 text-primary"><?= $query->num_rows; ?></h4>
+
                             </div>
                         </div>
                     </div>
@@ -228,9 +228,9 @@ if (!isset($_SESSION['username'] )) {
                                 <p class="mb-2">Total users</p>
                                 <?php
                                 $query = $connect->query("SELECT * FROM users");
-                                
-                            ?>
-                                <h4 class="mb-0 text-primary"><?= $query->num_rows;?></h4>
+
+                                ?>
+                                <h4 class="mb-0 text-primary"><?= $query->num_rows; ?></h4>
 
                             </div>
                         </div>
@@ -238,8 +238,8 @@ if (!isset($_SESSION['username'] )) {
                 </div>
             </div>
 
-             <!-- Recent Sales Start -->
-             <div class="container-fluid pt-4 px-4">
+            <!-- Recent Sales Start -->
+            <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Recent users logged in</h6>
@@ -251,39 +251,38 @@ if (!isset($_SESSION['username'] )) {
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">UserName</th>
-                                    
+
                                     <th scope="col">Email</th>
 
                                     <th scope="col">Phone</th>
-                                    
+
                                     <th scope="col">action</th>
                                 </tr>
                             </thead>
 
 
                             <?php
-  $i=0;
-foreach($feching as $key => $user)
-  { 
-  $i++;
-   ?>
+                            $i = 0;
+                            foreach ($feching as $key => $user) {
+                                $i++;
+                            ?>
 
-   
-  <tbody>
-     <tr>
-        <th scope="row"><?php echo $i ?></th>
-            <td><?=$user->username; ?></td>
-                                
-            <td><?=$user->email; ?></td>
-             <td><?=$user->phone; ?></td>
-            <td>
-            <a href="edit.php?id=<?=$user->id; ?>" style="padding-right: 10px; color:green"><button class="btn btn-success">edit</button></a>
-            <a href="adduser/deleteUser.php?id=<?=$user->id; ?>" onclick="return confirm('Are you sure you want to delete this file with its details permanently? click Ok to continue or click Cancel')"><button class="btn btn-danger">delete</button></a>
-             </td>
-      </tr>
-                               
-                               
-   </tbody>
+
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><?php echo $i ?></th>
+                                        <td><?= $user->username; ?></td>
+
+                                        <td><?= $user->email; ?></td>
+                                        <td><?= $user->phone; ?></td>
+                                        <td>
+                                            <a href="edit.php?id=<?= $user->id; ?>" style="padding-right: 10px; color:green"><button class="btn btn-success">edit</button></a>
+                                            <a href="adduser/deleteUser.php?id=<?= $user->id; ?>" onclick="return confirm('Are you sure you want to delete this file with its details permanently? click Ok to continue or click Cancel')"><button class="btn btn-danger">delete</button></a>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
                             <?php } ?>
                         </table>
                     </div>
@@ -292,7 +291,7 @@ foreach($feching as $key => $user)
             <!-- Recent Sales End -->
 
             <!-- Widgets Start -->
-            
+
             <!-- Widgets End -->
 
 
@@ -301,13 +300,13 @@ foreach($feching as $key => $user)
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Exodus.rw</a>, All Right Reserved. 
+                            &copy; <a href="#">Exodus.rw</a>, All Right Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="#">Eugene</a>
-                        </br>
-                        Distributed By <a class="border-bottom" href="#" target="_blank">Exodus </a>
+
+                            </br>
+                            Distributed By <a class="border-bottom" href="#" target="_blank">Exodus </a>
                         </div>
                     </div>
                 </div>
@@ -337,10 +336,9 @@ foreach($feching as $key => $user)
 
 
     <script>
-
-$(document).ready(function () {
-    $('#example').DataTable();
-});
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
     </script>
 </body>
 

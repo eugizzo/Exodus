@@ -1,11 +1,10 @@
-
-<?php 
+<?php
 session_start();
 include '../db/connection.php';
 
 
-if (!isset($_SESSION['username'] )) {
-	header('location:../signup_page.php');
+if (!isset($_SESSION['username'])) {
+    header('location:../signup_page.php');
 }
 ?>
 
@@ -54,21 +53,21 @@ if (!isset($_SESSION['username'] )) {
 
 
         <!-- Sidebar Start -->
-<!-- Sidebar Start -->
-<div class="sidebar pe-4 pb-3">
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary">Exodus</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="../img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="../../images/exodusprofile.jpg" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                <h6 class="mb-0"><?php echo $_SESSION['username'] ;?></h6>
-                <span>Admin</span>
-                     </div>
+                        <h6 class="mb-0"><?php echo $_SESSION['username']; ?></h6>
+                        <span>Admin</span>
+                    </div>
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="../index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2 text-primary"></i>Dashboard</a>
@@ -77,7 +76,7 @@ if (!isset($_SESSION['username'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../news/postNews.php" class="dropdown-item "><i class="fa fa-plus-circle me-2 text-primary"></i>Add News </a>
                             <a href="../news/postlist.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>News list</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -85,7 +84,7 @@ if (!isset($_SESSION['username'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="#" class="dropdown-item active"><i class="fa fa-plus-circle me-2 text-primary"></i>Add Destination</a>
                             <a href="destList.php" class="dropdown-item "><i class="fa fa-file me-2 text-primary"></i>destination List</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -93,7 +92,7 @@ if (!isset($_SESSION['username'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../adduser/adduser.php" class="nav-item nav-link"><i class="fa fa-plus-circle me-2 text-primary"></i> Add Users</a>
                             <a href="../adduser/listuser.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>UserList</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -101,7 +100,7 @@ if (!isset($_SESSION['username'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../gallery/insertGallery.php" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add Gallery</a>
                             <a href="../gallery/listOfGallery.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Gallery list</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -109,20 +108,21 @@ if (!isset($_SESSION['username'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../songs/oursong.php" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add songs</a>
                             <a href="../songs/oursong.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>our songs</a>
-                            
+
                         </div>
                     </div>
-                    
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-user-circle me-2 text-primary"></i>Advatising</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../advatise/addAdvatising.php" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add </a>
                             <a href="../advatise/list.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>List</a>
-                            
+
                         </div>
                     </div>
                 </div>
-            </nav></div>
+            </nav>
+        </div>
         <!-- Sidebar End -->
 
 
@@ -140,12 +140,12 @@ if (!isset($_SESSION['username'] )) {
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    
-                   
+
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="../img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION['username'] ;?></span>
+                            <img class="rounded-circle me-lg-2" src="../../images/exodusprofile.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION['username']; ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
@@ -154,11 +154,11 @@ if (!isset($_SESSION['username'] )) {
                         </div>
                     </div>
                 </div>
-           </nav>
+            </nav>
             <!-- Navbar End -->
 
             <!-- Sale & Revenue Start -->
-           
+
             <!-- Sale & Revenue End -->
 
             <!-- Sales Chart Start -->
@@ -168,53 +168,47 @@ if (!isset($_SESSION['username'] )) {
             <!-- Recent Sales End -->
 
             <div class="row">
-                <div class="col-sm-3"  style="background-color: #f3f6f9;"></div>
-            <div class="col-sm-6 " style="padding-top: 10px;">
-                <div class="bg-light rounded h-100 p-4">
-                    <h3 class="mb-4 text-primary">Add destination</h3>
-                    <form method='POST' action="insertDest.php" enctype="multipart/form-data">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput"
-                            placeholder="news title" name="title">
-                        <label for="floatingInput">Title</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="file" class="form-control" id="floatingPassword"
-                            placeholder="Attach file" name="file">
-                        <label for="floatingPassword">File</label>
-                    </div>
-                    
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput"
-                            placeholder="news title" name="location">
-                        <label for="floatingInput">location</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInputs"
-                            placeholder="published by" name="time">
-                        <label for="floatingInput">Time</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInputss"
-                            placeholder="Date" name="nearby">
-                        <label for="floatingInput">near</label>
-                    </div>
-                    <div class="form-floating mb-3" >
-                        <input type="text" class="form-control" id="floatingInputss"
-                            placeholder="price" name="price">
-                        <label for="floatingInput">price</label>
+                <div class="col-sm-3" style="background-color: #f3f6f9;"></div>
+                <div class="col-sm-6 " style="padding-top: 10px;">
+                    <div class="bg-light rounded h-100 p-4">
+                        <h3 class="mb-4 text-primary">Add destination</h3>
+                        <form method='POST' action="insertDest.php" enctype="multipart/form-data">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="news title" name="title">
+                                <label for="floatingInput">Title</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="file" class="form-control" id="floatingPassword" placeholder="Attach file" name="file">
+                                <label for="floatingPassword">File</label>
+                            </div>
 
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="news title" name="location">
+                                <label for="floatingInput">location</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputs" placeholder="published by" name="time">
+                                <label for="floatingInput">Time</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputss" placeholder="Date" name="nearby">
+                                <label for="floatingInput">near</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputss" placeholder="price" name="price">
+                                <label for="floatingInput">price</label>
+
+                            </div>
+
+                            <button type="submit" name="submit" class="btn btn-primary m-2">add destination</button>
+                        </form>
                     </div>
-                
-                    <button type="submit" name="submit" class="btn btn-primary m-2">add destination</button>
-                    </form>
                 </div>
+                <div class="col-sm-3 " style="background-color: #f3f6f9;"></div>
             </div>
-            <div class="col-sm-3 " style="background-color: #f3f6f9;"></div>
-        </div>
 
             <!-- Widgets Start -->
-            
+
             <!-- Widgets End -->
 
 
@@ -223,13 +217,13 @@ if (!isset($_SESSION['username'] )) {
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Exodus</a>, All Right Reserved. 
+                            &copy; <a href="#">Exodus</a>, All Right Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             <!-- Designed By <a href="://htmlcodex">Eugene</a> -->
-                        </br>
-                        Distributed By <a class="border-bottom" href="://themewagon" target="_blank">Exodus</a>
+                            </br>
+                            Distributed By <a class="border-bottom" href="://themewagon" target="_blank">Exodus</a>
                         </div>
                     </div>
                 </div>

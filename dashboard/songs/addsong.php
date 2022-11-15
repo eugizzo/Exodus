@@ -1,14 +1,14 @@
-<?php 
+<?php
 session_start();
 include '../db/connection.php';
 
 
-if (!isset($_SESSION['email'] )) {
-	header('location:../login/signin.php');
+if (!isset($_SESSION['email'])) {
+    header('location:../login/signin.php');
 }
 
 
-     ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,26 +20,26 @@ if (!isset($_SESSION['email'] )) {
     <meta content="" name="keywords">
     <meta content="" name="description">
 
- <!-- Favicon -->
- <link href="../img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
 
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Icon Font Stylesheet -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-<!-- Customized Bootstrap Stylesheet -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Template Stylesheet -->
-<link href="../css/style.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 
@@ -54,21 +54,21 @@ if (!isset($_SESSION['email'] )) {
         <!-- Spinner End -->
 
 
- <!-- Sidebar Start -->
- <div class="sidebar pe-4 pb-3">
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary">Jehovahjireh <span style="color: red;">News</span></h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="../img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="../../images/exodusprofile.jpg" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                <h6 class="mb-0"><?php echo $_SESSION['email'] ;?></h6>
-                <span>Admin</span>
-                     </div>
+                        <h6 class="mb-0"><?php echo $_SESSION['email']; ?></h6>
+                        <span>Admin</span>
+                    </div>
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="../index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2 text-primary"></i>Dashboard</a>
@@ -77,7 +77,7 @@ if (!isset($_SESSION['email'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="#" class="dropdown-item "><i class="fa fa-plus-circle me-2 text-primary"></i>Add News </a>
                             <a href="postlist.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>News list</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -85,7 +85,7 @@ if (!isset($_SESSION['email'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../event/addEvent.php" class="dropdown-item"><i class="fa fa-plus-circle me-2 text-primary"></i>Add New Event</a>
                             <a href="../event/eventList.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Event List</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -93,7 +93,7 @@ if (!isset($_SESSION['email'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../adduser/adduser.php" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add Users</a>
                             <a href="../adduser/listuser.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>UserList</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -101,16 +101,16 @@ if (!isset($_SESSION['email'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="#" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add Gallery</a>
                             <a href="listOfGallery.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>Gallery list</a>
-                            
+
                         </div>
                     </div>
-                    
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-music me-2 text-primary"></i>Our songs</a>
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="#" class="nav-item nav-link active"><i class="fa fa-plus-circle me-2 text-primary"></i> Add songs</a>
                             <a href="oursong.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>our songs</a>
-                            
+
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -118,11 +118,12 @@ if (!isset($_SESSION['email'] )) {
                         <div class="dropdown-menu bg-transparent border-0" style="padding-left: 30px;">
                             <a href="../advatise/addAdvatising.php" class="nav-item nav-link "><i class="fa fa-plus-circle me-2 text-primary"></i> Add </a>
                             <a href="../advatise/list.php" class="dropdown-item"><i class="fa fa-file me-2 text-primary"></i>List</a>
-                            
+
                         </div>
                     </div>
                 </div>
-            </nav></div>
+            </nav>
+        </div>
         <!-- Sidebar End -->
 
 
@@ -140,12 +141,12 @@ if (!isset($_SESSION['email'] )) {
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    
-                   
+
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="../img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION['email'] ;?></span>
+                            <img class="rounded-circle me-lg-2" src="../../images/exodusprofile.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION['email']; ?></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
@@ -159,47 +160,44 @@ if (!isset($_SESSION['email'] )) {
 
 
             <!-- Sale & Revenue Start -->
-           
+
             <!-- Sale & Revenue End -->
 
 
             <!-- Sales Chart Start -->
-            
+
 
             <!-- Recent Sales Start -->
-            
+
             <!-- Recent Sales End -->
             <div class="row">
                 <div class="col-sm-3 bg-light"></div>
-            <div class="col-sm-6 " style="padding-top: 20px; ">
-                <div class="bg-light rounded h-100 p-4" style="padding-top: 30px;">
-                    <h3 class="mb-4 " style="padding-top: 30px;">Add song on album</h3>
-                    <form method="POST" action="insertSong.php" enctype="multipart/form-data" style="padding-top: 30px;" >
-                    <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="floatingInput"
-                            placeholder="album number" name="album">
-                        <label for="floatingInput">Album number </label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingPassword"
-                            placeholder="enter song name" name="name">
-                        <label for="floatingPassword">song name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingPassword"
-                            placeholder="enter link of song" name="links">
-                        <label for="floatingPassword">add link</label>
-                    </div>
+                <div class="col-sm-6 " style="padding-top: 20px; ">
+                    <div class="bg-light rounded h-100 p-4" style="padding-top: 30px;">
+                        <h3 class="mb-4 " style="padding-top: 30px;">Add song on album</h3>
+                        <form method="POST" action="insertSong.php" enctype="multipart/form-data" style="padding-top: 30px;">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="album number" name="album">
+                                <label for="floatingInput">Album number </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="enter song name" name="name">
+                                <label for="floatingPassword">song name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="enter link of song" name="links">
+                                <label for="floatingPassword">add link</label>
+                            </div>
 
-                    <button type="submit" name="submit" class="btn btn-primary m-2">Add song</button>
-                    </form>
+                            <button type="submit" name="submit" class="btn btn-primary m-2">Add song</button>
+                        </form>
+                    </div>
                 </div>
+                <div class="col-sm-3 " style="background-color: #f3f6f9;"></div>
             </div>
-            <div class="col-sm-3 " style="background-color: #f3f6f9;"></div>
-        </div>
 
             <!-- Widgets Start -->
-            
+
             <!-- Widgets End -->
 
 
@@ -208,13 +206,13 @@ if (!isset($_SESSION['email'] )) {
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">jehovahjireh.rw</a>, All Right Reserved. 
+                            &copy; <a href="#">Exodus Travel and Tour Agency</a>, All Right Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="#">Eugene</a>
-                        </br>
-                        Distributed By <a class="border-bottom" href="#" target="_blank">jehovahjireh choir</a>
+                            </br>
+                            Distributed By <a class="border-bottom" href="#" target="_blank">Exodus Travel and Tour Agency</a>
                         </div>
                     </div>
                 </div>
@@ -228,8 +226,8 @@ if (!isset($_SESSION['email'] )) {
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
- <!-- JavaScript Libraries -->
- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/chart/chart.min.js"></script>
     <script src="../lib/easing/easing.min.js"></script>
